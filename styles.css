@@ -1,0 +1,104 @@
+
+
+#image-bg {
+  height: 100vh;
+  width: auto;
+}
+
+.mainbg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+}
+
+.fade-text {
+  margin-right: 3rem;
+  position: absolute;
+  font-size: 2vw;
+  color: black; 
+}
+
+.fade-text h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: fade 5s infinite;
+}
+
+/* timing */
+.fade-text h1:nth-child(1) {
+  animation-delay: 0s;
+}
+.fade-text h1:nth-child(2) {
+  animation-delay: 1s;
+}
+.fade-text h1:nth-child(3) {
+  animation-delay: 2s;
+}
+.fade-text h1:nth-child(4) {
+  animation-delay: 3s;
+}
+.fade-text h1:nth-child(5) {
+  animation-delay: 4s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.font {
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.button {
+  position: absolute;
+  align-items: start;
+  margin-top: 66vh;
+  margin-left: 10vw;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #dff1f9;
+  border: none;
+  animation: pulse-grow 2s infinite alternate ease-in-out;
+  box-shadow: 0 0 0.5rem 0 #03a9f4,
+    /* Primary glow */ 0 0 1rem 0.5rem rgba(3, 169, 244, 0.5); /* Secondary, softer glow */
+}
+
+@keyframes pulse-grow {
+  /* At the start of the animation cycle */
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0.25rem white, 0 0 0.5rem rgba(255, 0, 119, 0.3);
+    /* Multiple shadows create a richer glow */
+  }
+
+  /* At the peak of the animation cycle */
+  100% {
+    transform: scale(1); /* Grows the element by 30% */
+    /* Increases the blur and spread values for a more intense glow */
+    box-shadow: 0 0 0.5rem rgba(255, 0, 119, 0.8),
+      0 0 1rem rgba(255, 0, 119, 0.6), 0 0 1.5rem rgba(255, 0, 119, 0.4);
+  }
+}
+
+
